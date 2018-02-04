@@ -85,7 +85,7 @@ class MedianFilter(Filter):
 		# (eg first run of update)
 		if self.scan_history is None:
 			self.scan_history = np.empty((self.num_scans_to_median, sensor_data.shape[0]),
-			 							dtype=np.float)
+			 							dtype=np.double)
 		
 		# Test for data size mismatch
 		if sensor_data.shape[0] != self.scan_history.shape[1]:
